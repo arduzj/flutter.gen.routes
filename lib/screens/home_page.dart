@@ -5,7 +5,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size mq = MediaQuery.of(context).size;
 
     return SafeArea(
       child: Scaffold(
@@ -19,47 +18,39 @@ class HomePage extends StatelessWidget {
             children: [
               
               //REGISTER PAGE button
-              SizedBox(
-                width: mq.width * .8,
-                height: mq.height * .2,
-                child: TextButton(
-                  style: const ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll(Colors.blue),
-                  ),
-                  child: const Text(
-                    "Register Page",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 30,
-                    ),
-                  ),
-                  onPressed: () {
-                   int a = 1;
-                  }
+              TextButton(
+                style: const ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll(Colors.purpleAccent),
                 ),
+                child: const Text(
+                  "Register Page",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 30,
+                  ),
+                ),
+                onPressed: () {
+                 Navigator.pushNamed(context, 'register_page');
+                }
               ),
 
-              SizedBox(height: mq.height * .02,),
+              const SizedBox(height: 20,),
 
               //ABOUT PAGE button
-              SizedBox(
-                width: mq.width * .8,
-                height: mq.height * .2,
-                child: TextButton(
-                  style: const ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll(Colors.lightGreen),
-                  ),
-                  child: const Text(
-                    "About Page",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 30,
-                    ),
-                  ),
-                  onPressed: () {
-                   int a = 1;
-                  }
+              TextButton(
+                style: const ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll(Colors.lightBlueAccent),
                 ),
+                child: const Text(
+                  "About Page",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 30,
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.pushNamed(context, 'about_page');
+                }
               )
             ]
           ),
